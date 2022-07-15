@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Insert Element in Array</title>
+    <script>
+      //   let data = [60, 30, 10, 67, 40]
+      //   let newEl = 70
+      //   let position = 2
+      //   console.warn(data)
+      //   for (let i = data.length - 1; i >= 0; i--) {
+      //     //console.warn(data[i])
+      //     if (i >= position) {
+      //       data[i + 1] = data[i]
+      //       if (i == position) {
+      //         data[i] = newEl
+      //       }
+      //     }
+      //   }
+      //   console.warn(data)
 
+      // Its manual insert
+      function insertEL () {
+        let data = [60, 30, 10, 67, 40]
+        let newEl = document.getElementById('element').value
+        newEl = parseInt(newEl)
+        let position = document.getElementById('position').value
+        console.warn('Before Entry: ' + data)
+        console.warn(data)
+        for (let i = data.length - 1; i >= 0; i--) {
+          //console.warn(data[i])
+          if (i >= position) {
+            data[i + 1] = data[i]
+            if (i == position) {
+              data[i] = newEl
+            }
+          }
+        }
+        console.warn('After Entry: ' + data)
+
+        console.log('Using JS built in function !!!')
+
+        let items = [20, 40, 50, 6, 2, 9]
+        console.warn('Before Methods Use: ' + items)
+        items.splice(2, 0, 200)
+        console.warn('After Methods Use: ' + items)
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="position"
+      id="position"
+      placeholder="Enter Position"
+    />
+    <input
+      type="text"
+      name="element"
+      id="element"
+      placeholder="Enter element"
+    />
+    <button onclick="insertEL()">Insert</button>
+  </body>
+</html>

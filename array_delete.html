@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Delete Element From Array</title>
+
+    <script>
+      //   let data = [30, 20, 45, 76, 20, 80]
+      //   let position = 3 // 76
+      //   for (let i = position; i < data.length - 1; i++) {
+      //     data[i] = data[i + 1]
+      //     //console.warn(data[i])
+      //   }
+      //   data.length = data.length - 1
+      //   console.warn(data)
+
+      function removeEL () {
+        let data = [30, 20, 45, 76, 20, 80]
+        let position = document.getElementById('position').value
+        position = parseInt(position)
+        console.warn(data)
+        for (let i = position; i < data.length - 1; i++) {
+          data[i] = data[i + 1]
+          //console.warn(data[i])
+        }
+        data.length = data.length - 1
+        console.warn(data)
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="position" id="position" />
+    <button onclick="removeEL()">Remove Element</button>
+  </body>
+</html>
