@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Traversing</title>
+
+    <script>
+      let data = [9, 45, 2, 8, 45, 23, 7, 78, 0, 11, 41, 77]
+
+      //   Traveling through the array.
+      //   for (let i = 0; i < data.length; i++) {
+      //     document.write(`Array ${i}: ${data[i]} <br>`)
+      //   }
+
+      //   let x = 10
+      //   document.write(data[x])
+
+      function getElement () {
+        let el = document.getElementById('element').value
+        if (el < data.length && el > 0 && typeof parseInt(el) === 'number') {
+          alert(data[el])
+        } else {
+          alert('Please enter valid Input')
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="element" id="element" />
+    <button onclick="getElement()">Get element</button>
+  </body>
+</html>
